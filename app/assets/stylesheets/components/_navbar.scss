@@ -1,12 +1,15 @@
-.navbar-lewagon {
+.navbar {
+  display: flex;
   justify-content: space-between;
-  background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.btn-outline-secondary a {
+  text-decoration: none;
+  color: grey;
+  &:hover {
+  	color: white;
+  }
 }
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.btn-outline-secondary {
+  border-radius: 5px;
 }

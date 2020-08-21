@@ -9,8 +9,40 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="btn btn-outline-secondary"><%= link_to "Add new cocktail", new_cocktail_path %></div>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="banner">
+
+      <%= yield %>
+    
+    </div>
+
+    <footer class="footer">
+      <ol class="contact-details">
+        <li><%= image_tag "logo.PNG", alt: "logo"%></li>
+        <li>"T" <a href="+316000000"> +316 00 00 00</a></li> 
+        <li>"E" <a href="mailto:essam_d@hotmail.com"> essam_d@hotmail.com</a></li> 
+        <li>
+          <span class="address_rule">"Dam square",</span>
+          <span class="address_rule">"1234 GG Amsterdam",</span>
+          <span class="address_rule">"The Netherlands"</span>
+        </li> 
+      </ol>
+      <ul>
+        <li><a href="https://github.com/Zangetsu89"><i class="fab fa-github-square"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/essam-dawood-a522a041/"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://www.facebook.com/Ed7.AlexDelPiero/"><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href="https://www.instagram.com/ed7_da.wood/"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </footer>
   </body>
 </html>
