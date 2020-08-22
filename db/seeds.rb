@@ -2,7 +2,9 @@ require 'json'
 require 'open-uri'
 
 puts "Cleaning database..."
+Dose.destroy_all
 Ingredient.destroy_all
+Cocktail.destroy_all
 
 puts "Creating Ingredients..."
 

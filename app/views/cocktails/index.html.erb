@@ -1,15 +1,15 @@
-<div class="container">
+<div class="card-container">
   <h1>Cocktails</h1>
-  <div class="container">
-<% @cocktails.each do |cocktail|  %>
-<div class="card-product">
-  <%= cl_image_tag cocktail.photo.key %>
-  <div class="card-product-infos">
-    <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-    <p><%= link_to "Remove", cocktail_path(cocktail), method: :delete %></p>
+  <div class="row">
+    <% @cocktails.each do |cocktail|  %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="cards">
+          <%= cl_image_tag cocktail.photo.key, class: "card-img-top" %>
+          <h5><%= link_to cocktail.name, cocktail_path(cocktail), class: "card-title" %></h5>
+          <p><%= link_to "Remove", cocktail_path(cocktail), method: :delete, class: "card-text" %></p>
+        </div> 
+      </div>
+    <% end %>
   </div>
 </div>
-<% end %>
-</div>
-    <%= link_to 'Back to all Cocktails', cocktails_path %>
-</div>
+

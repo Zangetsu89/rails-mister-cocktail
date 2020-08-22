@@ -1,9 +1,59 @@
-.container h1{
-  padding-top: 20px;
-  color: white;
+.new-page {
+  border: 1px transparent;
+  background-color: rgba(0,0,0, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  color: black;
   font-weight: bold;
+  max-width: 700px;
+  display: flex;
+  margin: 20px auto;
+  flex-direction: column;
 }
 
-.cards {
-  justify-content: space-around;
+.new-page .btn-secondary {
+  color: white;
+  opacity: 0.8;
+  border-radius: 10px;
+  &:hover {
+  	opacity: 1;
+  }
+}
+
+.new-page .form-control {
+  width: 60%;
+}
+
+.show-page {
+  border: 1px transparent;
+  background-color: rgba(0,0,0, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  color: black;
+  font-weight: bold;
+  max-width: 700px;
+  display: flex;
+  margin: 20px auto;
+  flex-direction: column;
+}
+
+.show-page .form-control {
+  width: 60%;
+}
+
+.show-page h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.form-inputs {
+
+}
+.show-page .btn-secondary {
+  color: white;
+  opacity: 0.8;
+  border-radius: 5px;
+  &:hover {
+    opacity: 1;
+  }
 }
