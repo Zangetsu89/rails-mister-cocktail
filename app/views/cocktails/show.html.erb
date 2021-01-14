@@ -2,7 +2,7 @@
   <h3><%= @cocktail.name %></h3>
   <%= link_to 'Back to all Cocktails', cocktails_path, class: "btn btn-secondary" %>
   <div class="row">
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12">
       <% @cocktail.doses.each do |dose|%>
         <h3><%= dose.description %></h3>
         <h3><%= dose.ingredient.name %></h3>
@@ -11,10 +11,10 @@
         <% end %>
       <% end %>
 
-      <div class="col-sm-12 col-md-6">
+      <div class="col-sm-12">
         <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
       </div>
-    </div>
+   </div>
 
     <h3>Reviews</h3>
   <% if @cocktail.reviews.empty? %>
@@ -37,4 +37,5 @@
   <% end %>
 
   <%= render "reviews/new", cocktail: @cocktail, review: @review %>
+</div>
 </div>
