@@ -1,15 +1,16 @@
 class DosesController < ApplicationController
   
   def new
+    @cocktail = Cocktail.find(params[:cocktail_id])
   	@dose = Dose.new
   end
 
   def create
-  	cocktail = Cocktail.find(params[:cocktail_id])
+  	@cocktail = Cocktail.find(params[:cocktail_id])
   	@dose = Dose.new(strong_dose_params)
-    @dose.cocktail = cocktail
+    @dose.cocktail = @cocktail
   	if @dose.save
-  	  redirect_to cocktail_path(cocktail)
+  	  redirect_to cocktail_path(@cocktail)
     else
     puts @dose.errors.full_messages
     render :new

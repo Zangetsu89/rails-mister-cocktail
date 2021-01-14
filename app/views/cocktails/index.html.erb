@@ -1,12 +1,16 @@
 <div class="card-container">
-  <h1>Cocktails</h1>
+  <h1>Cocktails <%= image_tag "drink.png", alt: "cocktail icon", width: 40 %></h1> 
   <div class="row">
     <% @cocktails.each do |cocktail|  %>
       <div class="col-12 col-md-6 col-lg-4">
         <div class="cards">
+        <% if cocktail.photo.present? %>
           <%= cl_image_tag cocktail.photo.key, class: "card-img-top" %>
+        <% end %>
+          <div class="card-background">
           <h5><%= link_to cocktail.name, cocktail_path(cocktail), class: "card-title" %></h5>
           <p><%= link_to "Remove", cocktail_path(cocktail), method: :delete, class: "card-text" %></p>
+          </div>
         </div> 
       </div>
     <% end %>

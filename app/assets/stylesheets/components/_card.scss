@@ -13,18 +13,49 @@
   max-width: 50%;
 }
 .cards {
-  background-color: red;
+  
   width: 200px;
 }
 
 .card-img-top {
   width: 200px;
   height: 125px;
+  border-radius: 20px 0 0 0; 
+}
+
+.card-background {
+  background-color: rgba(0,0,0, 0.1);
+  border-radius: 0 0 200px 0;
+  opacity: 0.5;
 }
 
 .cards h5 {
   padding: 5px 5px 0 5px;
+  
 }
 .cards p {
   padding: 0 5px 5px 5px;
+}
+
+.cards h5 a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.cards p a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.card-container h1 {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 3px solid black;
 }
